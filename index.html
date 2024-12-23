@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
     <link rel="stylesheet" href="./css/main.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
     <div class="header container" id="header">
-        <div class="app-icon"></div>
-        <div class="app-title"></div>
+        <div class="app-icon">
+            <ion-icon name="swap"></ion-icon>
+        </div>
+        <div class="app-title">
+            <h1>UnitConverter</h1>
+        </div>
     </div>
     <div class="main container" id="main">
         <div class="converter">
@@ -30,7 +33,7 @@
                     </select>
                 </div>
                 <div class="arrow-icon">
-
+                    <ion-icon name="swap"></ion-icon>
                 </div>
                 <div class="measure-input-div">
                     <input type="number" step=".01" id="measure-input">
@@ -41,7 +44,8 @@
             </div>
             <div class="row" id="favorites-results">
                 <div class="favorite-icon">
-
+                    <ion-icon name="heart-empty"></ion-icon>
+                    <!-- <ion-icon name="heart"></ion-icon> -->
                 </div>
                 <div class="results">
                     <div class="result-input">
