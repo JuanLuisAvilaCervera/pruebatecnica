@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
@@ -23,13 +25,7 @@
             </div>
             <div class="row" id="converter">
                 <div class="unit-select">
-                    <select>
-                        <option id="ktm">kilómetros a millas</option>
-                        <option id="mtk">millas a kilómetros</option>
-                        <option id="mtp">metros a pies</option>
-                        <option id="ptm">pies a metros</option>
-                        <option id="ctp">centímetros a pulgadas</option>
-                        <option id="ptc">pulgadas a centímetros</option>
+                    <select id="unit-select">
                     </select>
                 </div>
                 <div class="arrow-icon">
@@ -58,7 +54,7 @@
             </div>
         </div>
         <div class="savedlist">
-            <label for="saved">Guardados</label>
+            <!-- <label for="saved">Guardados</label> -->
             <!-- <div class="saved" id="[ARRAYNUM]">
                 <div class="data">[NUM][MEASURE][ARROW][NUM][MEASURE]</div>
                 <div class="delete" id="[ARRAYNUM]"></div>
