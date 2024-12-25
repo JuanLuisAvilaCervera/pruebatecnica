@@ -29,8 +29,8 @@
                     <select id="unit-select">
                     </select>
                 </div>
-                <div class="arrow-icon">
-                    <ion-icon name="swap"></ion-icon>
+                <div class="arrow-icon" >
+                    <ion-icon name="swap"  id="changeUnits" style="width:100px; height:100px;"></ion-icon>
                 </div>
                 <div class="measure-input-div">
                     <input type="number" step=".01" id="measure-input">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row" id="favorites-results">
-                <div class="favorite-icon">
+                <div id="favorite-icon">
                     <ion-icon name="heart-empty"></ion-icon>
                     <!-- <ion-icon name="heart"></ion-icon> -->
                 </div>
@@ -54,12 +54,10 @@
                 </div>
             </div>
         </div>
-        <div class="savedlist">
-            <!-- <label for="saved">Guardados</label> -->
-            <!-- <div class="saved" id="[ARRAYNUM]">
-                <div class="data">[NUM][MEASURE][ARROW][NUM][MEASURE]</div>
-                <div class="delete" id="[ARRAYNUM]"></div>
-            </div>-->
+        <label for="savedList">Guardados</label>
+        <div id="savedList">
+            
+            <!-- LISTA DE GUARDADOS -->
         </div>
     </div>
     <div class="footer container" id="footer">
