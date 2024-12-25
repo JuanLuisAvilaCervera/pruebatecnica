@@ -25,6 +25,8 @@ $(function(){
 
     $("#changeUnits").on("click", function(){ setOppositeUnit() })
     $("#favorite-icon").on("click", function(){ save() })
+
+    listSaved();
 })
 
 //Calcular conversión
@@ -64,7 +66,6 @@ function setOppositeUnit(){
     // SOLUCIÓN: Necesita ambas para cambiar correctamente
 
     let result = $("#result-input-p").text();
-    console.log(result);
 
     $("#"+opposite).attr("selected","selected");
     $("#"+opposite).prop("selected","selected");
@@ -76,7 +77,6 @@ function setOppositeUnit(){
 
 function save(){
 
-    console.log("in");
 
     let id =  $("#unit-select").find(":selected").attr("id");
     let opposite = $("#unit-select").find(":selected").attr("opposite");
@@ -104,11 +104,21 @@ function save(){
 }
 
 function listSaved(){
-    let savedHTML = `<div class="saved" id="[ARRAYNUM]">
-                <div class="data">[NUM][MEASURE][ARROW][NUM][MEASURE]</div>
-                <div class="delete" id="[ARRAYNUM]"></div>
-            </div>`;
-    let savedList = $("#savedList");
+    // let savedHTML = `<div class="saved" id="[ARRAYNUM]">
+    //             <div class="data">[NUM][MEASURE][ARROW][NUM][MEASURE]</div>
+    //             <div class="delete" id="[ARRAYNUM]"></div>
+    //         </div>`;
+    // let savedList = $("#savedList");
+
+    let storageList = {...localStorage}
+    
+    console.log(storageList);
+    for(let i = 0 ; i < storageList.length ; i++){
+        // if(storageList[i].key.includes("savedConversion")){
+        //     console.log("IN")
+        // }
+        console.log(storageList[i])
+    }
 }
 
 
