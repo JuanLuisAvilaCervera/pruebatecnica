@@ -104,25 +104,34 @@ function save(){
 }
 
 function listSaved(){
-    // let savedHTML = `<div class="saved" id="[ARRAYNUM]">
-    //             <div class="data">[NUM][MEASURE][ARROW][NUM][MEASURE]</div>
-    //             <div class="delete" id="[ARRAYNUM]"></div>
-    //         </div>`;
-    // let savedList = $("#savedList");
-
+    let savedHTML = `<div class="saved">
+                <div class="data">[MEASURE][UNITM]<ion-icon name="swap"></ion-icon>[RESULT][UNITR]</div>
+                <div class="delete" id="[ID]"><ion-icon name="close"></ion-icon></div>
+            </div>`;
     let storageList = {...localStorage}
-    
-    console.log(storageList);
-    for(let i = 0 ; i < storageList.length ; i++){
-        // if(storageList[i].key.includes("savedConversion")){
-        //     console.log("IN")
-        // }
-        console.log(storageList[i])
+
+    $("#savedList").text("");
+    for(var key in storageList){
+        if(key.includes('savedConversion')){
+            let savedMeasure = JSON.parse(storageList[key])
+            let saved = savedHTML.replace('[MEASURE]', savedMeasure.measure)
+                                .replace('[UNITM]', savedMeasure.id)
+                                .replace('[RESULT]', savedMeasure.result)
+                                .replace('[UNITR]', savedMeasure.opposite)
+                                .replace('[ID]', key);
+
+            document.getElementById('savedList').innerHTML+=saved;
+
+            $(".delete").on("click", function(){
+                deleteSaved($(this).attr("id"));
+            })
+            
+        }
+        
     }
 }
 
-
-
-
-
-
+function deleteSaved( id){
+    localStorage.removeItem(id);
+    listSaved();
+}
