@@ -26,6 +26,12 @@ $(function(){
     $("#changeUnits").on("click", function(){ setOppositeUnit() })
     $("#favorite-icon").on("click", function(){ save() })
 
+    $("#heart-icon").on("mouseenter", function(){
+        $("#heart-icon").attr("name", "heart");
+    }).on("mouseleave", function(){
+        $("#heart-icon").attr("name", "heart-empty");
+    })
+
     listSaved();
 })
 
@@ -104,10 +110,10 @@ function save(){
 }
 
 function listSaved(){
-    let savedHTML = `<div class="saved">
-                <div class="data">[MEASURE][UNITM]<ion-icon name="swap"></ion-icon>[RESULT][UNITR]</div>
-                <div class="delete" id="[ID]"><ion-icon name="close"></ion-icon></div>
-            </div>`;
+    let savedHTML = `<div class="saved-div"><div class="saved ">
+                <div class="data">[MEASURE][UNITM]<ion-icon name="arrow-forward"></ion-icon>[RESULT][UNITR]</div>
+                <div class="delete" id="[ID]"><ion-icon name="close" class="close-icon"></ion-icon></div>
+            </div></div>`;
     let storageList = {...localStorage}
 
     $("#savedList").text("");

@@ -1,0 +1,32 @@
+@media (max-width: 320px){
+    #app-header{
+        width: 100%;
+        margin-left: 20px;
+    }
+    #savedDiv{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    .saved-div{
+        width:100%;
+        margin-right: 0;
+    }
+    .converter{
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .unit-select{
+        width: 100%;
+    }
+    .measure-input-div{
+        width: 100%;
+    }
+
+    .center-row#converter{
+        flex-direction: column;
+    }
+}

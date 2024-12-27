@@ -6,62 +6,80 @@
     <title>Unit Converter</title>
 
     <script type="module" src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/body.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <div class="header container" id="header">
-        <div class="app-icon">
-            <ion-icon name="swap"></ion-icon>
+        <div class="center-row" id="app-header">
+            <div class="app-icon">
+                <ion-icon name="swap" style="height:25px; width:25px;"></ion-icon>
+            </div>
+            <div class="app-title">
+                <h2 id="app-title">unit converter</h2>
+            </div>
         </div>
-        <div class="app-title">
-            <h1>UnitConverter</h1>
-        </div>
+        
     </div>
     <div class="main container" id="main">
-        <div class="converter">
-            <div class="row" id="convert-title">
-                <h5>Convertir</h5>
-            </div>
-            <div class="row" id="converter">
-                <div class="unit-select">
-                    <select id="unit-select">
-                    </select>
+        <div class=" center-row">
+            <div class="converter">
+                <div id="convert-title">
+                    <h3>Convertir</h3>
                 </div>
-                <div class="arrow-icon" >
-                    <ion-icon name="swap"  id="changeUnits" style="width:100px; height:100px;"></ion-icon>
-                </div>
-                <div class="measure-input-div">
-                    <input type="number" step=".01" id="measure-input">
-                </div>
-                <div class="measure-unit">
-                    <p id="measure-unit-p">km</p>
-                </div>
-            </div>
-            <div class="row" id="favorites-results">
-                <div id="favorite-icon">
-                    <ion-icon name="heart-empty"></ion-icon>
-                    <!-- <ion-icon name="heart"></ion-icon> -->
-                </div>
-                <div class="results">
-                    <div class="result-input">
-                        <p id="result-input-p">100</p>
+                <div class="center-row" id="converter">
+                    <div class="unit-select center-row">
+                        <select id="unit-select">
+                        </select>
+                        <div class="arrow-icon" >
+                            <ion-icon name="swap"  id="changeUnits" ></ion-icon>
+                        </div>
                     </div>
-                    <div class="result-unit">
-                        <p id="result-unit-p">millas</p>
+                    <div class="center-row" id="input">
+                        <div class="measure-input-div">
+                            <input type="number" step=".01" id="measure-input" placeholder="0">
+                        </div>
+                        <div class="measure-unit">
+                            <p id="measure-unit-p">km</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class=" center-row" id="favorites-results">
+                    <div id="favorite-icon">
+                        <ion-icon name="heart-empty" id="heart-icon"></ion-icon>
+                        <!-- <ion-icon name="heart"></ion-icon> -->
+                    </div>
+                    <div class="results center-row">
+                        <div class="result-input">
+                            <p id="result-input-p">100</p>
+                        </div>
+                        <div class="result-unit">
+                            <p id="result-unit-p">millas</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <label for="savedList">Guardados</label>
-        <div id="savedList">
-            
-            <!-- LISTA DE GUARDADOS -->
+        <div class="center-row">
+            <div id="savedDiv">
+                <label for="savedList" id="saved-label">Guardados</label>
+                <div id="savedList">
+                    
+                    <!-- LISTA DE GUARDADOS -->
+                     <!-- <div class="saved-div"><div class="saved ">
+                            <div class="data">[MEASURE][UNITM]<ion-icon name="arrow-forward"></ion-icon>[RESULT][UNITR]</div>
+                            <div class="delete" id="[ID]"><ion-icon name="close" class="close-icon"></ion-icon></div>
+                        </div></div> -->
+                </div>
+            </div>
         </div>
+        
+        
     </div>
     <div class="footer container" id="footer">
-        <div class="row">
+        <div class="center-row">
             <div class="tos">
                 <button class="footerbutton" id="termsofservice">Terms of service</button>
             </div>

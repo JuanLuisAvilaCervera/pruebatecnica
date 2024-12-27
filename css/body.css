@@ -1,0 +1,46 @@
+@import url(./input.css);
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./main.css);
+@import url(./media.css);
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face{
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+:root {
+    --converter-violet: #2E0039;
+    font-family: Poppins-Medium;
+    line-height: 21px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.container{
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+.center-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

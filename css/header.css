@@ -1,0 +1,24 @@
+.header{
+    color: var(--converter-violet);
+    box-shadow: 0px 2px 4px 0px #00000040;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#app-header{
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+}
+
+.app-icon{
+    margin-right: 10px;
+}
+
+#app-title{
+    font-family:Poppins-Bold;
+}

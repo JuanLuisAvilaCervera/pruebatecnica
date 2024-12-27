@@ -1,1 +1,116 @@
-@import url(./input.css);
+
+.main{
+    margin-top: 30px;
+}
+
+/* CONVERTER */
+.converter{
+    background-color: var(--converter-violet);
+    color: white;
+    width: 50%;
+    border-radius: 21px;
+    padding: 21px;
+    padding-top: 0;
+    box-shadow: 0px 0px 8px 3px #00000033;
+}
+
+#convert-title {
+    align-items:flex-start !important;
+}
+
+#measure-input{
+    font-family: Poppins-Medium;
+    text-align: end;
+    
+}
+
+#changeUnits:hover{
+    color: #676767;
+}
+
+.close-icon:hover{
+    color: black;
+}
+
+.measure-input-div{
+    margin-right: 10px;
+}
+
+#result-input-p{
+    text-align: end;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.result-input{
+    margin-right: 10px;
+}
+
+#unit-select , #unit-select option, #measure-input{
+    font-family: Poppins-Medium;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 100%;
+}
+
+#unit-select:hover{
+    background-color: #676767;
+    border-radius: 5px;
+}
+
+#favorites-results div{
+    width:100%;
+}
+
+
+
+
+/* SAVED */
+
+#savedDiv{
+    width: 50%;
+    margin-top: 50px;
+}
+
+#savedList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.saved-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    max-width: 400px;
+    box-shadow: 0px 0px 2px 2px #0000001A;
+    background-color: #E3E3E3;
+    border-radius: 10px;
+    height: 40px ;
+    margin: 5px;
+}
+
+.saved{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins-Light;
+    font-size:14px;
+    color:#676767
+}
+
+#saved-label{
+    color:#676767;
+    font-weight: 700;
+}
